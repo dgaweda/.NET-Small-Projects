@@ -1,0 +1,65 @@
+﻿@model Shop.ViewModels.CartViewModel
+@using Shop.Infrastructure
+@{
+    ViewBag.Title = "CartIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="content">
+    @Html.Action("CategoriesMenu", "Book")
+    
+    
+    <section id="rightContent">
+        <table id="book_description">
+
+            <caption>Your Shopping Cart</caption>
+
+            @foreach (var cartItem in Model.CartItems)
+            {
+                <tr class="bottomLine" id="cart-record-@cartItem.Book.BookId">
+                    <td>
+                        <a href="@Url.Action("Details", "Book", new { id = cartItem.Book.BookId })">
+                            <h1 id="AaA" style="background-image: url(@Url.BookImagesPath(cartItem.Book.IcoName));" />
+                        </a>
+                    </td>
+
+                    <td>
+                        <h10 id="textPos">@cartItem.Book.Title</h10>
+                    </td>
+
+                    <td>
+                        <h10>Quantity:</h10><h10 id="cart-quantity-@cartItem.Book.BookId">@cartItem.Quantity </h10>
+                    </td>
+
+                    <td>
+                        <h10>@String.Format("{0:0.##}", cartItem.Value)$</h10>
+                    </td>
+
+                    <td>
+                        <a href="@Url.Action("Remove", "Cart", new { BookId = cartItem.Book.BookId})" id="removeButton">Remove</a>
+                    </td>
+                </tr>
+            }
+
+            <tr>
+                <td class="" id="FinalPrice">
+                    <h1>Sum: <h1 id="final-price-value">@String.Format("{0:0.##}", Model.FinalPrice) $</h1></h1>
+                </td>
+                <td>
+                    @if (Model.FinalPrice > 0)
+                    {
+                        <a href="@Url.Action("Pay", "Cart")" class="" id="payButton">
+                            Pay
+                        </a>
+
+                        <a href="@Url.Action("Clear", "Cart")" class="" id="payButton">
+                            Clear
+                        </a>
+                    }
+                </td>
+            </tr>
+
+
+        </table>
+    </section>
+</section>

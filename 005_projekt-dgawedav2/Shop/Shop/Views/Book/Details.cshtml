@@ -1,0 +1,53 @@
+﻿@model Shop.Models.Book
+@using Shop.Infrastructure
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="content">
+    @Html.Action("CategoriesMenu")
+
+    <section id="rightContent">
+        <table id="book_description">
+            <caption id="bookCaption">Book</caption>
+            <tr>
+                <td>
+                    <h1 id="img" style="background-image: url(@Url.BookImagesPath(Model.IcoName));"></h1>
+                </td>
+                <td>
+                    <a href="@Url.Action("AddToCart", "Cart", new {id=Model.BookId})" class="submitLink">Add to Cart</a>
+                    <h1 id="price">Price: <br />@Model.Price$</h1>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <a href="@Url.Action("AddBook", "Manage", new { BookId = Model.BookId })" class="submitLink">
+                            Edit
+                        </a>
+                    }
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h2 id="title">"@Model.Title"</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>@Model.Author</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p id="description">
+                        @Model.Description
+                    </p>
+                </td>
+            </tr>
+
+        </table>
+    </section>
+</section>
+

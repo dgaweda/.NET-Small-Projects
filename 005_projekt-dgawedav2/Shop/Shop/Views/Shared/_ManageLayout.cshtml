@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet">
+</head>
+
+<body>
+    <section id="main" style="min-height:500px;">
+        <header>
+            <section id="menu">
+                <table style="width:100%;">
+                    <tr id="cartAndButton">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <td id="menuLogIn" style="background-image:url(@Url.Content("~/Content/Images/Login/user.png"))">
+                                @Html.Partial("_LoginPartial")
+                            </td>
+                        }
+                        else
+                        {
+                            <td id="menuLogIn" style="background-image:url(@Url.Content("~/Content/Images/Login/guest.png"))">
+                                @Html.Partial("_LoginPartial")
+                            </td>
+                        }
+
+                        <td>
+                            <a id="registerLink" href="@Url.Action("Index", "Home")">
+                                Start
+                            </a>
+                            <a id="registerLink" href="@Url.Action("ManageIndex", "Manage")">
+                                Your Data
+                            </a>
+                            <a id="registerLink" href="@Url.Action("OrderList", "Manage")">
+                                Order List
+                            </a>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a id="registerLink" href="@Url.Action("AddBook", "Manage")">
+                                    Add
+                                </a>
+                            }
+                        </td>
+                        <td>
+                            <a href="@Url.Action("CartIndex", "Cart")" id="registerLink">Cart (<span id="cart-header-items-count">@Html.Action("GetQuantityOfCartItems", "Cart")</span>)</a>
+
+                        </td>
+                        <td id="cart">
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="banner">
+                <a href="@Url.Content("~/")">
+                    <h4 id="bannerText">Dariusz Gawęda - ReadIt.app</h4>
+                </a>
+            </section>
+        </header>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>
+            <p id="footerText">Copyright © 2021 onwards by Dariusz Gawęda. All rights reserved.</p>
+        </footer>
+    </section>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
