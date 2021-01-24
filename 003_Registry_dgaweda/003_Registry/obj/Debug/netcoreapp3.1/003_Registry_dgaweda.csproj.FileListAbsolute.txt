@@ -1,0 +1,13 @@
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.exe
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.deps.json
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.runtimeconfig.json
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.runtimeconfig.dev.json
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.dll
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\bin\Debug\netcoreapp3.1\003_Registry_dgaweda.pdb
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.AssemblyInfoInputs.cache
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.AssemblyInfo.cs
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.csproj.CoreCompileInputs.cache
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.dll
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.pdb
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.genruntimeconfig.cache
+C:\Users\Darek\source\repos\.NET\003_Registry_dgaweda\003_Registry\obj\Debug\netcoreapp3.1\003_Registry_dgaweda.csprojAssemblyReference.cache
